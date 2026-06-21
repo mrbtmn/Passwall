@@ -84,7 +84,7 @@ echo "Installing Passwall 1 ..."
 
 sleep 2
 
-rm -f passwall.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwall.sh && chmod 777 passwall.sh && sh passwall.sh
+rm -f passwall.sh && wget https://raw.githubusercontent.com/mrbtmn/Passwall/main/passwall.sh && chmod 777 passwall.sh && sh passwall.sh
 
 
 ;;
@@ -95,7 +95,7 @@ echo "Installing Passwall 2 ..."
 
 sleep 2
 
-rm -f passwall2x.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwall2x.sh && chmod 777 passwall2x.sh && sh passwall2x.sh
+rm -f passwall2x.sh && wget https://raw.githubusercontent.com/mrbtmn/Passwall/main/passwall2x.sh && chmod 777 passwall2x.sh && sh passwall2x.sh
 
  
 ;;
@@ -104,11 +104,11 @@ rm -f passwall2x.sh && wget https://raw.githubusercontent.com/amirhosseinchoghae
         
 echo "Installing CloudFlare IP SCAN ..."
 
-opkg update
+apk update
 
-opkg install bash
+apk add bash
 
-opkg install curl
+apk add curl
 
 curl -ksSL https://gitlab.com/rwkgyg/cdnopw/raw/main/cdnopw.sh -o cdnopw.sh && bash cdnopw.sh
  
@@ -119,9 +119,9 @@ curl -ksSL https://gitlab.com/rwkgyg/cdnopw/raw/main/cdnopw.sh -o cdnopw.sh && b
         
 echo "Updating Passwall v1"
 
-opkg update
+apk update
 
-opkg install luci-app-passwall
+apk update luci-app-passwall
  
 ;;
 
@@ -130,9 +130,9 @@ opkg install luci-app-passwall
         
 echo "Updating Passwall v2"
 
-opkg update
+apk update
 
-opkg install luci-app-passwall2
+apk update luci-app-passwall2
  
 ;;
 
@@ -151,7 +151,7 @@ echo "Installing Passwall 2 With Mahsa Core ..."
 
 sleep 2
 
-rm -f mahsa.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/refs/heads/main/mahsa.sh && chmod 777 mahsa.sh && sh mahsa.sh
+rm -f mahsa.sh && wget https://raw.githubusercontent.com/mrbtmn/Passwall/refs/heads/main/mahsa.sh && chmod 777 mahsa.sh && sh mahsa.sh
 
 
 ;;
