@@ -38,11 +38,11 @@ uci commit
 
 ### Update Packages ###
 
-opkg update
+apk update
 
-opkg install luci
+apk add luci
 
-opkg install wget-ssl
+apk add wget-ssl
 
 ### Add Src ###
 
@@ -62,46 +62,46 @@ done
 
 ### Install package ###
 
-opkg update
+apk update
 
 echo -e "${GREEN} INSTALLING PASSWALL.2 FOR SNAPSHOT . ${NC}"
 
-opkg remove dnsmasq
+apk del dnsmasq
 sleep 3
-opkg install dnsmasq-full
+apk add dnsmasq-full
 sleep 2
-opkg install unzip
+apk add unzip
 sleep 2
-opkg install luci-app-passwall2
+apk add luci-app-passwall2
 sleep 3
-opkg install ipset
+apk add ipset
 sleep 2
-opkg install ipt2socks
+apk add ipt2socks
 sleep 2
-opkg install iptables
+apk add iptables
 sleep 2
-opkg install iptables-legacy
+apk add iptables-legacy
 sleep 2
-opkg install iptables-mod-conntrack-extra
+apk add iptables-mod-conntrack-extra
 sleep 2
-opkg install iptables-mod-iprange
+apk add iptables-mod-iprange
 sleep 2
-opkg install iptables-mod-socket
+apk add iptables-mod-socket
 sleep 2
-opkg install iptables-mod-tproxy
+apk add iptables-mod-tproxy
 sleep 2
-opkg install kmod-ipt-nat
+apk add kmod-ipt-nat
 sleep 2
-opkg install ca-bundle
+apk add ca-bundle
 sleep 1
-opkg install kmod-inet-diag
+apk add kmod-inet-diag
 sleep 1
-opkg install kernel
+apk add kernel
 sleep 1
-opkg install kmod-netlink-diag
+apk add kmod-netlink-diag
 sleep 1
-opkg install kmod-tun
-opkg install kmod-nft-tproxy kmod-nft-socket
+apk add kmod-tun
+apk add kmod-nft-tproxy kmod-nft-socket
 echo -e "${GREEN}Done ! ${NC}"
 
 
@@ -149,7 +149,7 @@ fi
 
 
 ####install_xray
-opkg install xray-core
+apk add xray-core
 
 RESULT=`ls /usr/bin/xray`
 
